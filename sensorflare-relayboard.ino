@@ -4,10 +4,10 @@
 //Initialize objects from the library
 //One object of the class "DigitalOut" is initialized for 
 //every digital output that will be remote control
-SensorFlare::DigitalOut outputPin1(D7);
-SensorFlare::DigitalOut outputPin2(D6);
-SensorFlare::DigitalOut outputPin3(D5);
-SensorFlare::DigitalOut outputPin4(D4);
+SensorFlare::DigitalOut outputPin1(D0);
+SensorFlare::DigitalOut outputPin2(D1);
+SensorFlare::DigitalOut outputPin3(D2);
+SensorFlare::DigitalOut outputPin4(D3);
 
 void setup() {
     
@@ -21,6 +21,5 @@ void setup() {
 }
 
 void loop() {
-    
 
 }
