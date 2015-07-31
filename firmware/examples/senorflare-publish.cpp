@@ -23,6 +23,11 @@ SensorFlare::VarPublish varPir("pir","PUBLIC");
 //Initialized the variable that will be published as PRIVATE
 SensorFlare::VarPublish varLight("light","PRIVATE");
 
+//The variables to publish must be declared
+float temperature;
+float light;
+int status;
+
 // Initialize the different variables that will be used in the program
 int tem_pin=A3;
 int light_pin=A4;
@@ -33,11 +38,13 @@ bool change;
 
 void setup() {
     
-// Call the begin() functions for every object of the classes "DigitalOut" and 
-//"PWMout" to be wired up correct and available.
+//Call the begin() functions for every object of the classes "DigitalOut", "PWMout"
+//and VarPublish to be wired up correct and available.
 
     pwm.begin();
-    
+    varTem.begin(temperature);
+    varLight.begin(light);
+    varPir.begin(status);
 //Set the extra pins that are used on the program, but are not controlled remotely
     pinMode(pir_pin,INPUT);
 
