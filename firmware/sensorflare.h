@@ -1,3 +1,10 @@
+/*"name": "sensorflare",
+Author: "LPFraile <lidiapf0@gmail.com>",
+License: "BSD",
+Version: "0.0.1",
+Description: "Include your Particle Core on Sensorflare"
+File: main file
+*/
 #ifndef SENSORFLARE
 #define SENSORFLARE
 #include "application.h"
