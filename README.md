@@ -55,7 +55,7 @@ SensorFlare::DigitalOut outputPin2(D1);
 SensorFlare::DigitalOut outputPin3(D2);
 SensorFlare::DigitalOut outputPin4(D3);
 ```
-Call the begin() method on the setup() functions for every object of the classes "DigitalOut" to be wired up correct and available the remote control fuctionality.
+Call the begin() method on the setup() functions for every object of the class "DigitalOut" to be wired up correct and available the remote control fuctionality.
 ```cpp
 void setup() {
     ...
@@ -89,7 +89,7 @@ float temperature;
 int light;
 int status;
 ```
-Call the begin(Variable) method on the setup() functions for every object of the classes "VarPublish" to be select the specific Variable as remote observe from Sensorflare.
+Call the begin(Variable) method on the setup() functions for every object of the class "VarPublish" to be select the specific Variable as remote observe from Sensorflare.
 ```cpp
 void setup() {
     ...
