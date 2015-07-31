@@ -40,6 +40,7 @@ SensorFlare::PWMOut::PWMOut(int _number)
 SensorFlare::VarPublish::VarPublish(String _name)
 {
     name = _name;
+    name.toCharArray(Arrayname,name.length()+1);
     lastTime=0UL;
     property="PUBLIC";
 }
@@ -47,6 +48,7 @@ SensorFlare::VarPublish::VarPublish(String _name)
 SensorFlare::VarPublish::VarPublish(String _name,String _property)
 {
     name = _name;
+    name.toCharArray(Arrayname,name.length()+1);
     lastTime=0UL;
     property=_property;
 }
@@ -77,6 +79,16 @@ void SensorFlare::PWMOut::begin()
         }
     }
 
+}
+//Initizalize the int variables
+void SensorFlare::VarPublish::begin(int _val)
+{
+    Spark.variable(Arrayname, &_val, INT);
+}
+//Initizalize the float variables
+void SensorFlare::VarPublish::begin(float _val)
+{
+    Spark.variable(Arrayname, &_val, INT);
 }
 // Main API functions that the library provides
 // typically called in `loop()`
