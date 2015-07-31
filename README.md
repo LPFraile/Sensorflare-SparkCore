@@ -21,8 +21,9 @@ VarPublish class:
 This class is used to publish variables on Sensorflare platform.
 
 -   SensorFlare::VarPublish ObjectName("VariableName"):It is the default constructor of the VarPublish class. Instance an object, called ObjectName, for each variable that will be published on Sensorflare platform with the name VariableName.The name is limited to 12 characters. The variable will be public on the cloud which means that another Spark Core user can access it.
--   SensorFlare::VarPublish ObjectName("VariableName",”PRIVATE”):It is a second constructor of the VarPublish class. Instance and object called ObjectName for each variable that will be published on the Sensorflare platform with the name VariableName.The name is limited to 12 characters. The variable will be private upload on the cloud which means that only the user can access it.
--   ObjectName.Publish(Variable, period):The Publish method will publish the specific Variable every period time with the name that has been chosen before "VariableName". Two kinds of variables can be published: int or float.
+-   SensorFlare::VarPublish ObjectName("VariableName",”PRIVATE”):It is a second constructor of the VarPublish class. Instance and object called ObjectName for each variable that will be published on the Sensorflare platform with the name VariableName.The name is limited to 12 characters. The variable will be private upload on the cloud which means that only the user can access it.Two kinds of variables can be published: int or float.
+-   ObjectName.begin(Variable): The begin(Variable) method must be called on setup() function in order to start to observe remotely the specific Variable on Sensorflare with the name that has been chosen before "VariableName".Two kinds of variables can be published: int or float.
+-   ObjectName.Publish(Variable, period):The Publish method will publish the specific Variable every period time. Must be called on loop() function in order to publish every time the new Variable value.
 
 # Code example for PWM signal control
 Include the Sensorflare library 
@@ -57,10 +58,12 @@ SensorFlare::DigitalOut outputPin4(D3);
 Call the begin() method on the setup() functions for every object of the classes "DigitalOut" to be wired up correct and available the remote control fuctionality.
 ```cpp
 void setup() {
+    ...
     outputPin1.begin();
     outputPin2.begin();
     outputPin3.begin();
     outputPin4.begin();
+    ...
 }
 ```
 
@@ -80,13 +83,26 @@ For initialized the variable that will be published as PRIVATE.
 ```cpp
 SensorFlare::VarPublish varLight("light","PRIVATE");
 ```
+Declare the variables that we will want to publish.
+```cpp
+float temperature;
+int light;
+int status;
+```
+Call the begin(Variable) method on the setup() functions for every object of the classes "VarPublish" to be select the specific Variable as remote observe from Sensorflare.
+```cpp
+void setup() {
+    ...
+    varTem.begin(temperature);
+    varLight.begin(light);
+    varPir.begin(status);
+    ...
+}
+```
+
 The Publish(Variable,period) method will be called on loop() function for every object that represent each variable which want to be published by associated the respective Variable and a Period on seconds. 
 ```cpp
 void loop() {
-    ...
-    int status;
-    float temperature;
-    int light;
     ...
     //Publish the variable at the called method time
     varPir.Publish(status,0); 
