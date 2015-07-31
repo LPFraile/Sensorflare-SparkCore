@@ -1,3 +1,10 @@
+/*"name": "sensorflare",
+Author: "LPFraile <lidiapf0@gmail.com>",
+License: "BSD",
+Version: "0.0.1",
+Description: "Include your Particle Core on Sensorflare"
+File: source file
+*/
 #include "sensorflare.h"
 //Structure to keep in EEPROM memory the value of uotput pins
 struct dataStruct
