@@ -1,5 +1,5 @@
 //Include the SensorFlare library 
-#include "sensorflare.h"
+#include "sensorflare/sensorflare.h"
 
 //Initialize objects from the library
 //One object of the class "DigitalOut" is initialized for 
