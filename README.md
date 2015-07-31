@@ -25,16 +25,16 @@ This class is used to publish variables on Sensorflare platform.
 -   ObjectName.Publish(Variable, period):The Publish method will publish the specific Variable every period time with the name that has been chosen before "VariableName". Two kinds of variables can be published: int or float.
 
 # Code example for PWM signal control
-Include the SensorFlare library 
+Include the Sensorflare library 
 ```cpp
 #include "sensorflare.h"
 ```
-Initialize objects from the library:One object of the class "PWMOut" is initialized for 
+Initialize objects from the library: One object of the class "PWMOut" is initialized for 
 every PWM output that will be remote control
 ```cpp
 SensorFlare::PWMOut pwm(A0);
 ```
-Call the begin() method of the object on the setup() function to initialize the elemnet.
+Call the begin() method of the object on the setup() function to initialize the element.
 ```cpp
 void setup() {
     pwm.begin();
@@ -43,11 +43,11 @@ void setup() {
 
 # Code example for Digital Outputs control
 
-Include the SensorFlare library 
+Include the Sensorflare library 
 ```cpp
 #include "sensorflare.h"
 ```
-Initialize objects from the library:One object of the class "DigitalOut" is initialized for every digital output that will be remote control. DO, D1, D2 and D3 will be the remote control digital pins in this case
+Initialize objects from the library: One object of the class "DigitalOut" is initialized for every digital output that will be remote control. DO, D1, D2 and D3 will be the remote control digital pins in this case.
 ```cpp
 SensorFlare::DigitalOut outputPin1(D0);
 SensorFlare::DigitalOut outputPin2(D1);
@@ -65,7 +65,7 @@ void setup() {
 ```
 
 # Code example for observe variables of our code remotly on Sensorflare
-Include the SensorFlare library 
+Include the Sensorflare library. 
 ```cpp
 #include "sensorflare.h"
 ```
@@ -76,11 +76,11 @@ will be published as PUBLIC.
 SensorFlare::VarPublish varTem("temperature");
 SensorFlare::VarPublish varPir("pir","PUBLIC");
 ```
-For initialized the variable that will be published as PRIVATE
+For initialized the variable that will be published as PRIVATE.
 ```cpp
 SensorFlare::VarPublish varLight("light","PRIVATE");
 ```
-The Publish(Variable,period) method will be called on loop() function for every object that represent each variable which want to be published by associated the respective Variable and a Period on seconds 
+The Publish(Variable,period) method will be called on loop() function for every object that represent each variable which want to be published by associated the respective Variable and a Period on seconds. 
 ```cpp
 void loop() {
     ...
