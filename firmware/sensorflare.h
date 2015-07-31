@@ -36,6 +36,7 @@ namespace SensorFlare
         private:
         String name;
         String property;
+        char Arrayname[12];
         int periode; 
         int var_int;
         float var_float;
@@ -44,6 +45,8 @@ namespace SensorFlare
         public:
         VarPublish(String _name);
         VarPublish(String _name, String _property);
+        void begin(int _val);
+        void begin(float _val);
         int Publish(int _val, int _periode);
         int Publish(float _val, int _periode);
     
