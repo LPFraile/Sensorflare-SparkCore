@@ -1,6 +1,5 @@
 #ifndef SENSORFLARE
 #define SENSORFLARE
-#include "application.h"
 
 namespace SensorFlare
 {
