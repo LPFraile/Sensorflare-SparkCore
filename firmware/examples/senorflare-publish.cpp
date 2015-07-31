@@ -3,7 +3,7 @@ Author: "LPFraile <lidiapf0@gmail.com>",
 License: "BSD",
 Version: "0.0.1",
 Description: "Include your Particle Core on Sensorflare"
-File: Examplo:Publish on sensorflare different variables of the code upload on Particle core
+File: Examplo:Publish on your Sensorflare account some variables of the code upload on your Particle core.
 */
 //Include the SensorFlare library 
 #include "sensorflare/sensorflare.h"
