@@ -1,9 +1,8 @@
 
 {
 "name": "sensorflare",
-"author": "LPFraile",
-"license": "BSD License"",
-"version": "0.0.1",
-"description": "Library to remote control of you Spark Core device of Particle from Sensorflare platform",
-"namespace": "Sensorflare-SparkCore"
+"author": "LPFraile <lidiapf0@gmail.com>",
+"license": "BSD",
+"version": "0.0.10",
+"description": "A simple library that include your Particle core to be controlled on Sesnorflare platform"
 }
