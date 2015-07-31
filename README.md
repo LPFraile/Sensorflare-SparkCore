@@ -77,7 +77,7 @@ SensorFlare::VarPublish varTem("temperature");
 SensorFlare::VarPublish varPir("pir","PUBLIC");
 ```
 For initialized the variable that will be published as PRIVATE
-
+```cpp
 SensorFlare::VarPublish varLight("light","PRIVATE");
 ```
 The Publish(Variable,period) method will be called on loop() function for every object that represent each variable which want to be published by associated the respective Variable and a Period on seconds 
