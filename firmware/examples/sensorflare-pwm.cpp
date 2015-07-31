@@ -5,7 +5,7 @@ Version: "0.0.1",
 Description: "Include your Particle Core on Sensorflare"
 File: Example: Control trough your Sensorflare account the PWM outputs on your Particle Core
 */
-//Include the SensorFlare library 
+//Include the Sensorflare library 
 #include "sensorflare/sensorflare.h"
 
 //Initialize objects from the library
