@@ -1,3 +1,10 @@
+/*"name": "sensorflare",
+Author: "LPFraile <lidiapf0@gmail.com>",
+License: "BSD",
+Version: "0.0.1",
+Description: "Include your Particle Core on Sensorflare"
+File: Example: Control trough your Sensorflare account the digital outputs of your Particle Core
+*/
 //Include the SensorFlare library 
 #include "sensorflare/sensorflare.h"
 
