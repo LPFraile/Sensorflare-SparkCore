@@ -1,6 +1,6 @@
 #ifndef SENSORFLARE
 #define SENSORFLARE
-
+#include "application.h"
 namespace SensorFlare
 {
     //One instance for each digital pin to remorte control as output 
