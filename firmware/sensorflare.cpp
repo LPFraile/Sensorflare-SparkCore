@@ -6,7 +6,7 @@ Description: "Include your Particle Core on Sensorflare"
 File: source file
 */
 #include "sensorflare.h"
-//Structure to keep in EEPROM memory the value of uotput pins
+//Structure to keep in EEPROM memory the value of output pins
 struct dataStruct
 {
     int digitalPin[8];
@@ -24,13 +24,13 @@ union {
 
 char stringvalue[40];
 // Constructor
-//Constructor of Digital Output controler elements
+//Constructor of Digital Output controller elements
 SensorFlare::DigitalOut::DigitalOut(int _number)
 {
     number = _number;
     state = LOW;
 }
-//Constructor of PWM Output controler elements
+//Constructor of PWM Output controller elements
 SensorFlare::PWMOut::PWMOut(int _number)
 {
     number = _number;
@@ -50,9 +50,7 @@ SensorFlare::VarPublish::VarPublish(String _name,String _property)
     lastTime=0UL;
     property=_property;
 }
-
-// Initializers that should be called in the `setup()` function
-
+//Initializers that should be called in the `setup()` function
 //Initizalize the pin as output and the last value received 
 void SensorFlare::DigitalOut::begin()
 {
@@ -68,7 +66,7 @@ void SensorFlare::PWMOut::begin()
 {
     pinMode(number, OUTPUT);
     Spark.function("pwm",controlPWM);
-    //Initialize the output with the last receive value from SensorFlare    
+    //Initialize the output with the last receive value from Sensorflare    
     readEEPROM();
     analogWrite(number,EEPROMData.outputData.digitalPin[number]);
     for (int i=0;i<8;i++){
@@ -137,7 +135,7 @@ int SensorFlare::VarPublish::Publish(float _val, int _periode)
 }
 
 //Function for open/close pin
-//The structure of the receive command is pin:state where state is on or off
+//The structure of the receive command is pin: state where state is on or off
 int controlPin(String command) {
     int index=command.indexOf(":");
      String pinout=command.substring(0,index);
