@@ -23,7 +23,7 @@ This class is used to publish variables on Sensorflare platform.
 -   SensorFlare::VarPublish ObjectName("VariableName"):It is the default constructor of the VarPublish class. Instance an object, called ObjectName, for each variable that will be published on Sensorflare platform with the name VariableName.The name is limited to 12 characters. The variable will be public on the cloud which means that another Spark Core user can access it.
 -   SensorFlare::VarPublish ObjectName("VariableName",”PRIVATE”):It is a second constructor of the VarPublish class. Instance and object called ObjectName for each variable that will be published on the Sensorflare platform with the name VariableName.The name is limited to 12 characters. The variable will be private upload on the cloud which means that only the user can access it.Two kinds of variables can be published: int or float.
 -   ObjectName.begin(Variable): The begin(Variable) method must be called on setup() function in order to start to observe remotely the specific Variable on Sensorflare with the name that has been chosen before "VariableName".Two kinds of variables can be published: int or float.
--   ObjectName.Publish(Variable, period):The Publish method will publish the specific Variable every period time. Must be called on loop() function in order to publish every time the new Variable value.
+-   ObjectName.Publish(Variable, period):The Publish method will publish the specific Variable every period time. Must be called on loop() function in order to publish every time the new Variable value.Only must be publish the variables later of call the corresponding begin(Variable) method. 
 
 # Code example for PWM signal control
 Include the Sensorflare library 
