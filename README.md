@@ -3,8 +3,6 @@
 
 Sensorflare library to include your Spark Core device from Particle on Sensorflare platform.
 
-Library description
----
 DigitalOutput class:
 --
 This class describes the elements that will be controlled with digital output.  Every object is then associated with the specific pin that will be remote control.
