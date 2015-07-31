@@ -5,7 +5,7 @@ Version: "0.0.1",
 Description: "Include your Particle Core on Sensorflare"
 File: Examplo:Publish on your Sensorflare account some variables of the code upload on your Particle core.
 */
-//Include the SensorFlare library 
+//Include the Sensorflare library 
 #include "sensorflare/sensorflare.h"
 
 //Initialize objects from the library
@@ -15,8 +15,8 @@ File: Examplo:Publish on your Sensorflare account some variables of the code upl
 SensorFlare::PWMOut pwm(A0);
 
 //One object of the class "VarPublish" is initialized for every variable
-//that will be published in order to access remotly from the cloud
-//The argument that name the varible has a maximum of 12 characters
+//that will be published in order to access remotely from the cloud
+//The argument that name the variable has a maximum of 12 characters
 //Both methods initialized the variable that will be published as PUBLIC 
 SensorFlare::VarPublish varTem("temperature");
 SensorFlare::VarPublish varPir("pir","PUBLIC");
@@ -46,7 +46,7 @@ void setup() {
 void loop() {
     
     // Temperature sensor
-    float tem= analogRead(tem_pin); // read value from the sensor
+    float tem= analogRead(tem_pin); // read the value from the sensor
     // The returned value from the Core is going to be in the range from 0 to 4095
     // Calculate the voltage from the sensor reading
     float voltage = (tem * 3.3) / 4095;
@@ -54,7 +54,7 @@ void loop() {
     float temperature = deg - 273.15; // subtract absolute zero to get degrees Celsius
     
     //Luminosity
-    float photocell= analogRead(light_pin); // read value from the sensor
+    float photocell= analogRead(light_pin); // read the value from the sensor
     // The returned value from the Core is going to be in the range from 0 to 4095
     // Calculate the voltage from the sensor reading
     float Vphotocell = ((photocell * 3.3) / 4095);
