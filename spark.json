@@ -3,6 +3,6 @@
 "name": "sensorflare",
 "author": "LPFraile <lidiapf0@gmail.com>",
 "license": "BSD",
-"version": "0.0.10",
+"version": "0.0.1",
 "description": "Include your Particle Core on Sensorflare"
 }
