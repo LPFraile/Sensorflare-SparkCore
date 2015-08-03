@@ -32,7 +32,6 @@ int status;
 int tem_pin=A3;
 int light_pin=A4;
 int pir_pin=D0;
-int status;
 int new_status;
 bool change;
 
