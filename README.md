@@ -18,7 +18,7 @@ This class defines the output elements that will be controlled remotely by a PWM
 
 VarPublish class: 
 --
-This class is used to publish variables on Sensorflare platform.
+This class is used to publish variables on Sensorflare platform. The maximum number of this core variables that can be observe on Sensorflare is 10.  
 
 -   SensorFlare::VarPublish ObjectName("VariableName"):It is the default constructor of the VarPublish class. Instance an object, called ObjectName, for each variable that will be published on Sensorflare platform with the name VariableName.The name is limited to 12 characters. The variable will be public on the cloud which means that another Spark Core user can access it.
 -   SensorFlare::VarPublish ObjectName("VariableName",”PRIVATE”):It is a second constructor of the VarPublish class. Instance and object called ObjectName for each variable that will be published on the Sensorflare platform with the name VariableName.The name is limited to 12 characters. The variable will be private upload on the cloud which means that only the user can access it.Two kinds of variables can be published: int or float.
